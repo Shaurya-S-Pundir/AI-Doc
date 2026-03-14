@@ -14,7 +14,6 @@ except LookupError:
     nltk.download('punkt_tab')
     from nltk.tokenize import sent_tokenize
 
-from nltk.tokenize import sent_tokenize
 
 def extract_text(file_path: str) -> str:
    #Extract text from PDF, TXT file
