@@ -15,5 +15,9 @@ class VectorStore:
             np.array([query_embedding]), k
         )
 
-        results = [self.text_chunks[i] for i in indices[0]]
+        results = []
+        for i in indices[0]:
+            if i != -1 and i < len(self.text_chunks):
+                results.append(self.text_chunks[i])
+
         return results
